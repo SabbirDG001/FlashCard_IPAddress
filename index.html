@@ -1,0 +1,56 @@
+<script type="importmap">
+  {
+    "imports": {
+      "@google/genai": "https://esm.sh/@google/genai@^0.7.0"
+    }
+  }
+  </script>
+  <!-- Add Google Fonts Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <div class="container">
+    <h1>Flashcard Generator</h1>
+    <p>
+      Enter a topic or a list of terms and definitions to generate flashcards using the Gemini API.
+    </p>
+    <textarea
+      id="topicInput"
+      placeholder="Enter topic (e.g., Ancient Rome) or 'Term: Definition' pairs (one per line)"
+    >IP Address: A unique numerical identifier assigned to every device on a network for identification and location.
+IPv4: Internet Protocol version 4, a 32-bit address format expressed as four decimal numbers separated by dots (e.g., 192.168.1.1).
+IPv6: Internet Protocol version 6, a 128-bit address format written as eight groups of four hexadecimal digits.
+Public IP Address: A globally unique and routable IP address used for communication over the internet.
+Private IP Address: An IP address reserved for use within local networks and not routable on the public internet.
+Static IP Address: An IP address manually assigned to a device that remains constant.
+Dynamic IP Address: An IP address automatically assigned by a DHCP server that can change periodically.
+Subnet Mask: A 32-bit number that divides an IP address into network and host portions.
+DHCP (Dynamic Host Configuration Protocol): A protocol used to automatically assign IP addresses and other network settings to devices on a network.
+Class A Network: IPv4 address range for very large networks with up to 16 million hosts per network (1.0.0.0-126.255.255.255).
+Class B Network: IPv4 address range for medium-to-large networks with up to 65,000 hosts (128.0.0.0-191.255.255.255).
+Class C Network: IPv4 address range suited for smaller networks with up to 254 hosts (192.0.0.0-223.255.255.255).
+Default Gateway: A router that forwards packets from a local network to external networks, such as the internet.
+NAT (Network Address Translation): A technique allowing multiple devices on a private network to share a single public IP address.
+CIDR (Classless Inter-Domain Routing): A method to improve IP address allocation by removing fixed class boundaries and using flexible subnet masks.
+Network Address: The first IP address in a subnet, which represents the entire network itself.
+Broadcast Address: The last IP address in a subnet, used to send data to all devices on that subnet.
+Loopback Address: A reserved address (127.0.0.1) used for testing network interfaces on the local machine.
+APIPA (Automatic Private IP Addressing): Addresses in the 169.254.x.x range automatically assigned when a DHCP server is unavailable.
+Subnetting: The process of dividing a large IP network into smaller, more manageable subnetworks (subnets).
+IPv6 Unicast: An IPv6 address type for one-to-one communication, delivering a packet to a single interface.
+IPv6 Multicast: An IPv6 address type for one-to-many communication, delivering a packet to multiple devices in a group.
+IPv6 Anycast: An IPv6 address type for one-to-nearest communication, delivering packets to the nearest device with a matching address.
+SLAAC (Stateless Address Autoconfiguration): An IPv6 feature allowing devices to configure their own IP address without a DHCP server.
+IPsec (Internet Protocol Security): A security feature natively supported by IPv6, providing end-to-end encryption and authentication.
+Dual Stack: A transition mechanism where devices run both IPv4 and IPv6 protocols simultaneously.
+IPv6 Tunneling: A transition mechanism where IPv6 packets are encapsulated within IPv4 packets to traverse IPv4 networks.
+NAT64: A transition mechanism that allows IPv6-only devices to communicate with IPv4-only services.
+VLSM (Variable Length Subnet Masking): A technique allowing administrators to allocate subnet sizes based on specific needs, optimizing address usage.
+DORA Process: The four-step DHCP process: Discover, Offer, Request, Acknowledge.</textarea>
+    <button id="generateButton">Generate Flashcards</button>
+    <div id="errorMessage" class="error-message"></div>
+    <div id="flashcardsContainer" class="flashcards-container">
+      <!-- Flashcards will be generated here -->
+    </div>
+  </div>
